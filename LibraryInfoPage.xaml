@@ -3,9 +3,8 @@
 		xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
 		x:Class="Library.LibraryInfoPage"
 		xmlns:maps="clr-namespace:Xamarin.Forms.Maps;assembly=Xamarin.Forms.Maps"
-		Title = "Libary Info"
+		Title = "About Libary"
 		IsBusy= "{Binding isBusy}">
-
 	<ContentPage.Content>
 		<ScrollView>
 			<Grid Padding="10" RowSpacing="10" ColumnSpacing="10">
@@ -24,25 +23,19 @@
 					<RowDefinition Height="Auto"/>
 					<RowDefinition Height="Auto"/>
 					<RowDefinition Height="Auto"/>
-					<RowDefinition Height="250"/>
+					<RowDefinition Height="Auto"/>
 				</Grid.RowDefinitions>
 				<Grid.ColumnDefinitions>
 					<ColumnDefinition Width=".5*"/>
 					<ColumnDefinition Width=".1*"/>
 					<ColumnDefinition Width=".4*"/>
 				</Grid.ColumnDefinitions>
-					<Image
-                x:Name="Image"
-                Grid.ColumnSpan="3"
-				Source=""
-                Aspect="AspectFill"
-				HorizontalOptions="FillAndExpand"
-				VerticalOptions ="FillAndExpand"/>
+					
 				<Label
 					Grid.Row="1"
 					Grid.ColumnSpan="3" 
 					FontSize="Small"
-					Text="{Binding Store.LocationHint}"
+					Text="{Binding lib.LocationHint}"
 					HorizontalOptions="Center"/>
 				<Button 
 					x:Name="ButtonCall"
@@ -67,7 +60,7 @@
 					Grid.ColumnSpan="3" 
 					FontAttributes="Bold"
 					FontSize="Medium"
-					Text="Store Hours"
+					Text="Library Hours"
 					TextColor="#3498DB" />
 
 				<Label 
